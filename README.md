@@ -92,7 +92,7 @@ Android app for visually impaired users. Real-time AI image captioning with text
 
 ### Recent Activity
 <!--START_SECTION:activity-->
-1. ❌ Closed PR [#634](https://github.com/FOSSEE/eSim/pull/634) in [FOSSEE/eSim](https://github.com/FOSSEE/eSim)
+1. ℹ️ Labeled issue [#1](https://github.com/vishnunandan555/mayfly/issues/1) in [vishnunandan555/mayfly](https://github.com/vishnunandan555/mayfly)
 <!--END_SECTION:activity-->
 
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=vishnunandan555&theme=github-compact&hide_border=true)
