@@ -16,11 +16,11 @@
 <div align="center">
 
  # (^_^)／
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/vishnunandan555)   [![X](https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white)](https://x.com/vishnunandan555)   [![Codeberg](https://img.shields.io/badge/Codeberg-2185D0?style=flat&logo=codeberg&logoColor=white)](https://codeberg.org/vishnunandan555)   [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:vishnunandan555@gmail.com)   ![Profile Views](https://komarev.com/ghpvc/?username=vishnunandan555&style=flat&color=blueviolet)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJ3aGl0ZSI%2BPHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B)](https://linkedin.com/in/vishnunandan555)   [![X](https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white)](https://x.com/vishnunandan555)   [![Codeberg](https://img.shields.io/badge/Codeberg-2185D0?style=flat&logo=codeberg&logoColor=white)](https://codeberg.org/vishnunandan555)   [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:vishnunandan555@gmail.com)   ![Profile Views](https://komarev.com/ghpvc/?username=vishnunandan555&style=flat&color=blueviolet)
 
 </div>
 
-> Pursuing B.Tech CSE  ●   [Christ College of Engineering, Irinjalakuda](https://cce.edu.in/)  ●  Technical Lead @ [FOSS Club CCE](https://www.linkedin.com/company/foss-cceijk/)
+> Pre-final year B.Tech CSE  ●   [Christ College of Engineering, Irinjalakuda](https://cce.edu.in/)
 
 ┌─ Computer science student who **learns by building things**. <br>
 ├─ *Exploring open-source, mobile apps, and systems programming*. <br>
@@ -36,10 +36,25 @@
 
 ## Active Projects
 
+**❯ [MayFly](https://github.com/vishnunandan555/mayfly)**  
+Zero-dependency local secrets manager for Go. Eliminates .env files and third-party dependencies through an AES-256-GCM encrypted vault, in-memory process injection with RAM zeroization, a custom standalone TUI, and a tamper-evident cryptographic audit log.  
+[![Production](./production.svg)](LEGEND.md) [![AI-Driven](https://img.shields.io/badge/AI--Driven-8E44AD?style=flat)](LEGEND.md) &nbsp;![Separator](https://img.shields.io/badge/-%3C%3E-2f363d?style=flat)&nbsp; ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat&logo=windows11&logoColor=white) ![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
 
 **❯ [GATE Progress Tracker](https://github.com/vishnunandan555/gate-tracker)**  
 An offline-first preparation suite for the GATE Exam, cross-compiled for Android, Windows, Linux, and Web PWA. Engineered with a reactive SQLite architecture (Drift) and zero-dependency local WebAssembly preloading for near-instant web boot times. Features rich study analytics, interactive visualization dashboards, and an automated background self-updater.  
 [![Production](./production.svg)](LEGEND.md) [![Solo Project](https://img.shields.io/badge/Solo_Project-15803D?style=flat)](LEGEND.md) [![AI-Driven](https://img.shields.io/badge/AI--Driven-8E44AD?style=flat)](LEGEND.md) &nbsp;![Separator](https://img.shields.io/badge/-%3C%3E-2f363d?style=flat)&nbsp; ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white) ![Android](https://img.shields.io/badge/Android-1F8A3D?style=flat&logo=android&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat&logo=windows11&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=flat&logo=pwa&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white) ![Actions](https://img.shields.io/badge/Actions-181717?style=flat&logo=github&logoColor=white)
+
+**❯ [RituRasa](https://github.com/vishnunandan555/RituRasa)**  
+An offline-first Android companion that provides personalized nutrition and food recommendations based on the menstrual cycle. Tracks cycle phases, maps nutritional priorities, and computes daily nutrient progress directly on-device using local SQLite.  
+[![Solo Project](https://img.shields.io/badge/Solo_Project-15803D?style=flat)](LEGEND.md) [![AI-Driven](https://img.shields.io/badge/AI--Driven-8E44AD?style=flat)](LEGEND.md) &nbsp;![Separator](https://img.shields.io/badge/-%3C%3E-2f363d?style=flat)&nbsp; ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white) ![Android](https://img.shields.io/badge/Android-1F8A3D?style=flat&logo=android&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+
+**❯ [SimplePharmaAPI](https://github.com/vishnunandan555/SimplePharmaAPI)**  
+High-performance pharmacological database & safety API with SQLite FTS5 BM25 search, polypharmacy overdose detection, drug-food timing advice, and AI fallback.  
+[![Production](./production.svg)](LEGEND.md) [![Solo Project](https://img.shields.io/badge/Solo_Project-15803D?style=flat)](LEGEND.md) [![AI-Driven](https://img.shields.io/badge/AI--Driven-8E44AD?style=flat)](LEGEND.md) &nbsp;![Separator](https://img.shields.io/badge/-%3C%3E-2f363d?style=flat)&nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white) ![Render](https://img.shields.io/badge/Render-46E3B7?style=flat&logo=render&logoColor=black)
+
+**❯ [SimpleNutriAPI](https://github.com/vishnunandan555/SimpleNutriAPI)**  
+Clinical and cycle-aware food composition API normalizing ICMR-NIN IFCT 2017 data across 500+ foods and 11,000+ nutrients, featuring a 6-factor ranking engine and offline SQLite mobile bundles.  
+[![Production](./production.svg)](LEGEND.md) [![Solo Project](https://img.shields.io/badge/Solo_Project-15803D?style=flat)](LEGEND.md) [![AI-Driven](https://img.shields.io/badge/AI--Driven-8E44AD?style=flat)](LEGEND.md) &nbsp;![Separator](https://img.shields.io/badge/-%3C%3E-2f363d?style=flat)&nbsp; ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white) ![Render](https://img.shields.io/badge/Render-46E3B7?style=flat&logo=render&logoColor=black)
 
 **❯ [Top Contributors API](https://github.com/vishnunandan555/top-contributors-api)**  
 A highly optimized, zero-config serverless endpoint that aggregates and showcases contributors across all your GitHub repositories. Hosted on Vercel and automated via GitHub Actions to dynamically generate live, cache-efficient SVG dashboards for profile READMEs.  
@@ -64,6 +79,10 @@ Open-source group expense tracker. PWA with auto-calculated splits, offline supp
 <details>
 <summary><span style="font-size: 1.35em; font-weight: bold; cursor: pointer;">Experimental Projects</span></summary>
 
+**❯ [Mesh402X](https://github.com/vishnunandan555/Mesh402X)**  
+Multi-agent orchestration framework designed for autonomous agent-to-agent collaboration and task execution workflows.  
+[![Hackathon](https://img.shields.io/badge/Hackathon-EA580C?style=flat)](LEGEND.md) [![Experiment](https://img.shields.io/badge/Experiment-EC4899?style=flat)](LEGEND.md) [![Collaboration](https://img.shields.io/badge/Collaboration-0284C7?style=flat)](LEGEND.md) [![AI-Driven](https://img.shields.io/badge/AI--Driven-8E44AD?style=flat)](LEGEND.md) &nbsp;![Separator](https://img.shields.io/badge/-%3C%3E-2f363d?style=flat)&nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+
 **❯ [UFDR Analyzer](https://github.com/vishnunandan555/ufdr-analyzer-sih25)** `SIH'25 (Demo)`  
 AI-powered forensic tool for analyzing digital evidence. Natural language querying, risk scoring, and pattern detection for law enforcement.  
 [![Hackathon](https://img.shields.io/badge/Hackathon-EA580C?style=flat)](LEGEND.md) [![Collaboration](https://img.shields.io/badge/Collaboration-0284C7?style=flat)](LEGEND.md) [![AI-Driven](https://img.shields.io/badge/AI--Driven-8E44AD?style=flat)](LEGEND.md) &nbsp;![Separator](https://img.shields.io/badge/-%3C%3E-2f363d?style=flat)&nbsp; ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white) ![Google Gemini](https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat&logo=google-gemini&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
@@ -84,9 +103,9 @@ Android app for visually impaired users. Real-time AI image captioning with text
 
 ## Skills
 
-**Languages** → Python · Java · Kotlin · Rust · JavaScript · C  
-**Frameworks** → Django · Flask · Spring Boot · React · Flutter  
-**Tools** → Git · Linux · PostgreSQL · SQLite · MySQL
+**Languages** → Go · Python · TypeScript · JavaScript · Dart · Rust · Kotlin · Java · C  
+**Frameworks** → FastAPI · Express · Flutter · React · Spring Boot · Django · Flask  
+**Tools** → Git · Linux · SQLite · PostgreSQL · MySQL · Docker · Render
 
 ---
 
