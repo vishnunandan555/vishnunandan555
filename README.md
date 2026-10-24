@@ -111,7 +111,7 @@ Android app for visually impaired users. Real-time AI image captioning with text
 
 ### Recent Activity
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#2](https://github.com/vishnunandan555/internscan/issues/2#issuecomment-6230481616) in [vishnunandan555/internscan](https://github.com/vishnunandan555/internscan)
+1. 🎉 Merged PR [#2](https://github.com/vishnunandan555/chunkstream/pull/2) in [vishnunandan555/chunkstream](https://github.com/vishnunandan555/chunkstream)
 <!--END_SECTION:activity-->
 
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=vishnunandan555&theme=github-compact&hide_border=true)
