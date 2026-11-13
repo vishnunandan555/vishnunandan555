@@ -111,7 +111,7 @@ Android app for visually impaired users. Real-time AI image captioning with text
 
 ### Recent Activity
 <!--START_SECTION:activity-->
-1. 🔒 Closed issue [#647](https://github.com/johnfanv2/LenovoLegionLinux/issues/647) in [johnfanv2/LenovoLegionLinux](https://github.com/johnfanv2/LenovoLegionLinux)
+1. 🗣 Commented on [#830](https://github.com/AOSSIE-Org/Resonate/pull/830#issuecomment-6827892712) in [AOSSIE-Org/Resonate](https://github.com/AOSSIE-Org/Resonate)
 <!--END_SECTION:activity-->
 
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=vishnunandan555&theme=github-compact&hide_border=true)
