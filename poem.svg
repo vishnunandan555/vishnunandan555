@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" width="500" height="150">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,400;1,600&amp;display=swap');
+
+      .poem-text {
+        font-family: 'EB Garamond', Garamond, Georgia, 'Times New Roman', serif;
+        font-size: 22px;
+        font-style: italic;
+        text-anchor: middle;
+        fill: #ffffff;
+      }
+
+      .highlight {
+        fill: #ff4d4f;
+        font-weight: 600;
+      }
+
+      /* Slow, deliberate poetic typing */
+      @keyframes type-1 { from { width: 0; } to { width: 240px; } }
+      @keyframes type-2 { from { width: 0; } to { width: 230px; } }
+      @keyframes type-3 { from { width: 0; } to { width: 270px; } }
+      @keyframes type-4 { from { width: 0; } to { width: 220px; } }
+
+      /*
+        Pacing:
+        - 0.6s breath before beginning
+        - Line 1: types 0.6s -> 2.1s (1.5s) | 1.2s pause
+        - Line 2: types 3.3s -> 4.8s (1.5s) | 1.2s pause
+        - Line 3: types 6.0s -> 7.7s (1.7s) | 1.4s dramatic pause
+        - Line 4: types 9.1s -> 10.7s (1.6s) | freezes permanently
+      */
+      #clip-r1 { animation: type-1 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0.6s forwards; }
+      #clip-r2 { animation: type-2 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) 3.3s forwards; }
+      #clip-r3 { animation: type-3 1.7s cubic-bezier(0.25, 0.1, 0.25, 1) 6.0s forwards; }
+      #clip-r4 { animation: type-4 1.6s cubic-bezier(0.25, 0.1, 0.25, 1) 9.1s forwards; }
+    </style>
+
+    <clipPath id="c1"><rect id="clip-r1" x="135" y="0" width="0" height="34" /></clipPath>
+    <clipPath id="c2"><rect id="clip-r2" x="140" y="34" width="0" height="34" /></clipPath>
+    <clipPath id="c3"><rect id="clip-r3" x="120" y="68" width="0" height="34" /></clipPath>
+    <clipPath id="c4"><rect id="clip-r4" x="145" y="102" width="0" height="38" /></clipPath>
+  </defs>
+
+  <g class="poem-text">
+    <g clip-path="url(#c1)">
+      <text x="250" y="27">Too curious to settle.</text>
+    </g>
+    <g clip-path="url(#c2)">
+      <text x="250" y="61">Too restless to stop.</text>
+    </g>
+    <g clip-path="url(#c3)">
+      <text x="250" y="95">So I chase every horizon</text>
+    </g>
+    <g clip-path="url(#c4)">
+      <text x="250" y="129">and arrive at <tspan class="highlight">none.</tspan></text>
+    </g>
+  </g>
+</svg>
