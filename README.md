@@ -26,8 +26,6 @@
 | <img src="./DATA/assets/badges/item-issue-closed.svg" alt="Closed Issue" width="18" height="18" /> | [**AOSSIE-Org/Website**](https://github.com/AOSSIE-Org/Website) | [#722 [BUG]: Website layout does not fill the entire screen wid...](https://github.com/AOSSIE-Org/Website/issues/722) | May 13, 2026 | Oct 27, 2026 |
 <!-- RECENT_CONTRIBUTIONS:END -->
 
-<br>
-
 <div align="center">
   <!-- FOOTER: Cyberpunk Status Signature & Terminal Connect Prompt -->
   <a href="https://vishnunandan.xyz"><img src="./DATA/assets/footer.svg" width="99%" alt="Footer Signature" /></a>
