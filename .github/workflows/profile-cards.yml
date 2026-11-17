@@ -2,7 +2,7 @@ name: Update Profile Cards
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs daily at midnight UTC
+    - cron: "0 */6 * * *" # Runs every 6 hours to keep activity & cards fresh
   workflow_dispatch:     # Allows manual trigger anytime
 
 permissions:
@@ -36,6 +36,7 @@ jobs:
       - name: Sync Card Assets and Refresh Dynamic Stats
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.METRICS_TOKEN || secrets.PAT_TOKEN || '' }}
         run: |
           mkdir -p DATA/assets
           if [ -f "DATA/assets/dotmatrix/streaks-dark.svg" ]; then

@@ -14,15 +14,16 @@
 </div>
 
 <!-- RECENT_CONTRIBUTIONS:START -->
-| Item | Repository | Contribution | Date |
-| :---: | :--- | :--- | :---: |
-| <img src="./DATA/assets/badges/item-issue-open.svg" alt="Open Issue" width="18" height="18" /> | [**StabilityNexus/Zplit**](https://github.com/StabilityNexus/Zplit) | [#75 [FEATURE]: Enhancement of Onboarding Screen and Low Res Assets](https://github.com/StabilityNexus/Zplit/issues/75) | Nov 16, 2026 |
-| <img src="./DATA/assets/badges/item-pr-open.svg" alt="Open PR" width="18" height="18" /> | [**StabilityNexus/Zplit**](https://github.com/StabilityNexus/Zplit) | [#74 fix(website): update website favicon and icons with official Z...](https://github.com/StabilityNexus/Zplit/pull/74) | Nov 15, 2026 |
-| <img src="./DATA/assets/badges/item-pr-draft.svg" alt="Draft PR" width="18" height="18" /> | [**StabilityNexus/Zplit**](https://github.com/StabilityNexus/Zplit) | [#76 feat(onboarding): decouple slide theming and upgrade high-res ...](https://github.com/StabilityNexus/Zplit/pull/76) | Nov 16, 2026 |
-| <img src="./DATA/assets/badges/item-issue-closed.svg" alt="Closed Issue" width="18" height="18" /> | [**AOSSIE-Org/Resonate**](https://github.com/AOSSIE-Org/Resonate) | [#738 DOC: Update TRANSLATIONS.md to reflect current auto-generation...](https://github.com/AOSSIE-Org/Resonate/issues/738) | Jan 25, 2026 |
-| <img src="./DATA/assets/badges/item-pr-merged.svg" alt="Merged PR" width="18" height="18" /> | [**AOSSIE-Org/Resonate**](https://github.com/AOSSIE-Org/Resonate) | [#830 docs: updated translations guide and l10n config](https://github.com/AOSSIE-Org/Resonate/pull/830) | Jun 23, 2026 |
-| <img src="./DATA/assets/badges/item-issue-open.svg" alt="Open Issue" width="18" height="18" /> | [**StabilityNexus/Zplit**](https://github.com/StabilityNexus/Zplit) | [#73 [GOOD FIRST ISSUE] [MINOR BUG]: Website uses default starter f...](https://github.com/StabilityNexus/Zplit/issues/73) | Nov 15, 2026 |
-| <img src="./DATA/assets/badges/item-issue-closed.svg" alt="Closed Issue" width="18" height="18" /> | [**johnfanv2/LenovoLegionLinux**](https://github.com/johnfanv2/LenovoLegionLinux) | [#647 [BUG] [LOQ 15IRX9 (NECN)] Rapid charge sysfs node missing in l...](https://github.com/johnfanv2/LenovoLegionLinux/issues/647) | Oct 28, 2026 |
+| Item | Repository | Contribution | Created Date | Last Updated |
+| :---: | :--- | :--- | :---: | :---: |
+| <img src="./DATA/assets/badges/item-issue-open.svg" alt="Open Issue" width="18" height="18" /> | [**StabilityNexus/Zplit**](https://github.com/StabilityNexus/Zplit) | [#75 [FEATURE]: Enhancement of Onboarding Screen and Low Res A...](https://github.com/StabilityNexus/Zplit/issues/75) | Nov 16, 2026 | Nov 16, 2026 |
+| <img src="./DATA/assets/badges/item-pr-open.svg" alt="Open PR" width="18" height="18" /> | [**StabilityNexus/Zplit**](https://github.com/StabilityNexus/Zplit) | [#74 fix(website): update website favicon and icons with offic...](https://github.com/StabilityNexus/Zplit/pull/74) | Nov 15, 2026 | Nov 16, 2026 |
+| <img src="./DATA/assets/badges/item-pr-draft.svg" alt="Draft PR" width="18" height="18" /> | [**StabilityNexus/Zplit**](https://github.com/StabilityNexus/Zplit) | [#76 feat(onboarding): decouple slide theming and upgrade high...](https://github.com/StabilityNexus/Zplit/pull/76) | Nov 16, 2026 | Nov 16, 2026 |
+| <img src="./DATA/assets/badges/item-issue-closed.svg" alt="Closed Issue" width="18" height="18" /> | [**AOSSIE-Org/Resonate**](https://github.com/AOSSIE-Org/Resonate) | [#738 DOC: Update TRANSLATIONS.md to reflect current auto-gener...](https://github.com/AOSSIE-Org/Resonate/issues/738) | Jan 25, 2026 | Nov 16, 2026 |
+| <img src="./DATA/assets/badges/item-pr-merged.svg" alt="Merged PR" width="18" height="18" /> | [**AOSSIE-Org/Resonate**](https://github.com/AOSSIE-Org/Resonate) | [#830 docs: updated translations guide and l10n config](https://github.com/AOSSIE-Org/Resonate/pull/830) | Jun 23, 2026 | Nov 16, 2026 |
+| <img src="./DATA/assets/badges/item-issue-open.svg" alt="Open Issue" width="18" height="18" /> | [**StabilityNexus/Zplit**](https://github.com/StabilityNexus/Zplit) | [#73 [GOOD FIRST ISSUE] [MINOR BUG]: Website uses default star...](https://github.com/StabilityNexus/Zplit/issues/73) | Nov 15, 2026 | Nov 15, 2026 |
+| <img src="./DATA/assets/badges/item-issue-closed.svg" alt="Closed Issue" width="18" height="18" /> | [**johnfanv2/LenovoLegionLinux**](https://github.com/johnfanv2/LenovoLegionLinux) | [#647 [BUG] [LOQ 15IRX9 (NECN)] Rapid charge sysfs node missing...](https://github.com/johnfanv2/LenovoLegionLinux/issues/647) | Oct 28, 2026 | Oct 31, 2026 |
+| <img src="./DATA/assets/badges/item-issue-closed.svg" alt="Closed Issue" width="18" height="18" /> | [**AOSSIE-Org/Website**](https://github.com/AOSSIE-Org/Website) | [#722 [BUG]: Website layout does not fill the entire screen wid...](https://github.com/AOSSIE-Org/Website/issues/722) | May 13, 2026 | Oct 27, 2026 |
 <!-- RECENT_CONTRIBUTIONS:END -->
 
 <br>
