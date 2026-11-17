@@ -56,33 +56,12 @@ jobs:
           if [ -f "NEW/assets/amber/languages-dark.svg" ]; then
             cp NEW/assets/amber/languages-dark.svg NEW/assets/classic-languages.svg
           fi
-          # Update dynamic stats in custom tipsy top banner
+          # Update dynamic public repo count in custom tipsy top banner
           if [ -f "NEW/assets/profile-summary-details.svg" ]; then
-            python3 -c "
-import json, re, urllib.request, os
-
-svg_path = 'NEW/assets/profile-summary-details.svg'
-token = os.environ.get('GITHUB_TOKEN', '')
-
-with open(svg_path, 'r', encoding='utf-8') as f:
-    content = f.read()
-
-headers = {'User-Agent': 'GitHub-Action'}
-if token:
-    headers['Authorization'] = f'token {token}'
-try:
-    req = urllib.request.Request('https://api.github.com/users/vishnunandan555', headers=headers)
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        user_data = json.loads(resp.read().decode())
-        repos = user_data.get('public_repos')
-        if repos is not None:
-            content = re.sub(r'>[0-9]+ public repos<', f'>{repos} public repos<', content)
-except Exception as e:
-    print('Error fetching repos:', e)
-
-with open(svg_path, 'w', encoding='utf-8') as f:
-    f.write(content)
-"
+            REPOS=$(curl -s https://api.github.com/users/vishnunandan555 | jq -r '.public_repos // empty')
+            if [ -n "$REPOS" ] && [ "$REPOS" != "null" ]; then
+              sed -i -E "s/>[0-9]+ public repos</>${REPOS} public repos</g" NEW/assets/profile-summary-details.svg
+            fi
           fi
           # Fetch dynamic GitHub PR Stats (Contribution Timeline)
           curl -s --max-time 20 "https://github-pr-stats-five.vercel.app/api/github-pr-stats?username=vishnunandan555&theme=dark&limit=5" -o NEW/assets/github-pr-stats.svg || true
