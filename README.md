@@ -8,7 +8,7 @@
   <!-- ROW 3: CALENDAR & ACTIVITY (1-Year 3D Isometric Commit Calendar & Recent Activity) -->
   <a href="https://vishnunandan.xyz"><img src="./DATA/assets/metrics-isocalendar-fullyear.svg" width="49.5%" alt="1-Year Contribution Calendar" /></a><a href="https://vishnunandan.xyz"><img src="./DATA/assets/metrics-activity.svg" width="49.5%" alt="Recent Activity" /></a><br>
   <!-- ROW 4: FOLLOW-UP & LEETCODE (Issues/PRs Follow-up Status & LeetCode Statistics) -->
-  <a href="https://vishnunandan.xyz"><img src="./DATA/assets/metrics-followup.svg" width="49.5%" alt="Issue and PR Follow-up" /></a><a href="https://leetcode.com/u/l0rdv1shnu/"><img src="./DATA/assets/metrics-leetcode.svg" width="49.5%" alt="LeetCode Statistics" /></a><br>
+  <a href="https://vishnunandan.xyz"><img src="./DATA/assets/metrics-followup.svg" width="49.5%" align="top" alt="Issue and PR Follow-up" /></a><a href="https://leetcode.com/u/l0rdv1shnu/"><img src="./DATA/assets/metrics-leetcode.svg" width="49.5%" align="top" alt="LeetCode Statistics" /></a><br>
   <!-- ROW 5: RECENT ACTIVITY BOARD HEADER -->
   <img src="./DATA/assets/activity-header.svg" width="99%" alt="Recent Activity Board" />
 </div>

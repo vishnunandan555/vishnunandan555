@@ -85,6 +85,9 @@ def customize_leetcode(filepath="DATA/assets/metrics-leetcode.svg"):
         svg = svg.replace('<h2 class="field">', '<h2 class="field main-title">', 1)
         svg = svg.replace("h2{margin:8px 0 2px;", f"h2.main-title{{justify-content:center !important;}}h2{{margin:8px 0 2px;")
 
+    # Match height with metrics-followup.svg (248px) so headings align horizontally
+    svg = re.sub(r'height="\d+"', 'height="248"', svg, count=1)
+
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(svg)
     print(f"Customized {filepath} successfully.")
