@@ -13,6 +13,10 @@ import os
 import re
 
 THEME_GREEN = "#3dff74"
+UNDERLINE_CSS = (
+    ".heading-title-container{display:inline-flex;flex-direction:column;align-items:center}"
+    ".heading-title-underline{display:block;width:80%;height:2px;background:#3dff74;border-radius:1px;margin-top:3px}"
+)
 
 def customize_isocalendar(filepath="DATA/assets/metrics-isocalendar-fullyear.svg"):
     if not os.path.exists(filepath):
@@ -28,6 +32,17 @@ def customize_isocalendar(filepath="DATA/assets/metrics-isocalendar-fullyear.svg
     if "h2.field{" not in svg and "justify-content:center" not in svg:
         svg = svg.replace("h2,h3{", f"h2.field{{justify-content:center !important;}}h2,h3{{")
 
+    # Add green 80% underline to heading text (excluding icon)
+    if "heading-title-container" not in svg:
+        svg = svg.replace("</style>", f"{UNDERLINE_CSS}</style>")
+        svg = re.sub(
+            r'(<h2 class="field">\s*<svg[^>]*>[\s\S]*?</svg>\s*)Contributions calendar(\s*</h2>)',
+            r'\1<span class="heading-title-container"><span>Contributions calendar</span><span class="heading-title-underline"></span></span>\2',
+            svg
+        )
+
+    with open(filepath, "r", encoding="utf-8") as f:
+        pass
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(svg)
     print(f"Customized {filepath} successfully.")
@@ -45,6 +60,15 @@ def customize_followup(filepath="DATA/assets/metrics-followup.svg"):
     # Center heading
     if "h2.field{" not in svg and "justify-content:center" not in svg:
         svg = svg.replace("h2,h3{", f"h2.field{{justify-content:center !important;}}h2,h3{{")
+
+    # Add green 80% underline to heading text (excluding icon)
+    if "heading-title-container" not in svg:
+        svg = svg.replace("</style>", f"{UNDERLINE_CSS}</style>")
+        svg = re.sub(
+            r'(<h2 class="field">\s*<svg[^>]*>[\s\S]*?</svg>\s*)<span class="followup-title">(.*?)</span>(\s*</h2>)',
+            r'\1<span class="heading-title-container"><span class="followup-title">\2</span><span class="heading-title-underline"></span></span>\3',
+            svg
+        )
 
     # Swap the two column blocks if 'On ... repositories' is first
     pattern = (
@@ -87,6 +111,15 @@ def customize_leetcode(filepath="DATA/assets/metrics-leetcode.svg"):
 
     # Match height with metrics-followup.svg (248px) so headings align horizontally
     svg = re.sub(r'height="\d+"', 'height="248"', svg, count=1)
+
+    # Add green 80% underline to heading text (excluding icon)
+    if "heading-title-container" not in svg:
+        svg = svg.replace("</style>", f"{UNDERLINE_CSS}</style>")
+        svg = re.sub(
+            r'(<h2 class="field main-title">\s*<svg[^>]*>[\s\S]*?</svg>\s*)LeetCode stats(\s*</h2>)',
+            r'\1<span class="heading-title-container"><span>LeetCode stats</span><span class="heading-title-underline"></span></span>\2',
+            svg
+        )
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(svg)
