@@ -50,8 +50,8 @@ def build_markdown_table(items):
         return "_No recent public contributions found._"
 
     rows = []
-    rows.append("| Type | Repository | Contribution | Status | Date |")
-    rows.append("| :---: | :--- | :--- | :---: | :---: |")
+    rows.append("| Item | Repository | Contribution | Date |")
+    rows.append("| :---: | :--- | :--- | :---: |")
 
     count = 0
     for it in items:
@@ -68,29 +68,24 @@ def build_markdown_table(items):
 
         if is_pr:
             if is_draft:
-                kind_icon = '<img src="./DATA/assets/badges/type-pr-draft.svg" alt="Draft PR" height="18" />'
-                status_badge = '<img src="./DATA/assets/badges/status-draft.svg" alt="Draft" height="24" />'
+                item_icon = '<img src="./DATA/assets/badges/item-pr-draft.svg" alt="Draft PR" width="18" height="18" />'
             elif merged:
-                kind_icon = '<img src="./DATA/assets/badges/type-pr.svg" alt="PR" height="18" />'
-                status_badge = '<img src="./DATA/assets/badges/status-merged.svg" alt="Merged" height="24" />'
+                item_icon = '<img src="./DATA/assets/badges/item-pr-merged.svg" alt="Merged PR" width="18" height="18" />'
             elif state == "open":
-                kind_icon = '<img src="./DATA/assets/badges/type-pr.svg" alt="PR" height="18" />'
-                status_badge = '<img src="./DATA/assets/badges/status-open.svg" alt="Open" height="24" />'
+                item_icon = '<img src="./DATA/assets/badges/item-pr-open.svg" alt="Open PR" width="18" height="18" />'
             else:
-                kind_icon = '<img src="./DATA/assets/badges/type-pr.svg" alt="PR" height="18" />'
-                status_badge = '<img src="./DATA/assets/badges/status-closed.svg" alt="Closed" height="24" />'
+                item_icon = '<img src="./DATA/assets/badges/item-pr-closed.svg" alt="Closed PR" width="18" height="18" />'
         else:
-            kind_icon = '<img src="./DATA/assets/badges/type-issue.svg" alt="Issue" height="18" />'
             if state == "open":
-                status_badge = '<img src="./DATA/assets/badges/status-open.svg" alt="Open" height="24" />'
+                item_icon = '<img src="./DATA/assets/badges/item-issue-open.svg" alt="Open Issue" width="18" height="18" />'
             else:
-                status_badge = '<img src="./DATA/assets/badges/status-closed.svg" alt="Closed" height="24" />'
+                item_icon = '<img src="./DATA/assets/badges/item-issue-closed.svg" alt="Closed Issue" width="18" height="18" />'
 
         title = it.get("title", "").strip()
         # Escape pipe symbols for Markdown table syntax
         title = title.replace("|", "—")
-        if len(title) > 55:
-            title = title[:52] + "..."
+        if len(title) > 65:
+            title = title[:62] + "..."
 
         number = it.get("number", "")
         html_url = it.get("html_url", "")
@@ -98,7 +93,7 @@ def build_markdown_table(items):
         contrib_link = f"[#{number} {title}]({html_url})"
         date_str = format_date(it.get("created_at", ""))
 
-        rows.append(f"| {kind_icon} | {repo_link} | {contrib_link} | {status_badge} | {date_str} |")
+        rows.append(f"| {item_icon} | {repo_link} | {contrib_link} | {date_str} |")
         count += 1
         if count >= LIMIT:
             break
