@@ -34,8 +34,8 @@ def process_svg():
 
     # 4. Adjust viewBox to crop away the empty top space from the removed heading
     svg = re.sub(
-        r'width="890" height="360" viewBox="0 0 890 360"',
-        'width="890" height="300" viewBox="0 60 890 300"',
+        r'width="890" height="\d+" viewBox="0 \d+ 890 \d+"',
+        'width="890" height="270" viewBox="0 76 890 270"',
         svg
     )
 

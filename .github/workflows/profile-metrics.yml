@@ -81,9 +81,10 @@ jobs:
             sed -i 's/#40c463/#006d32/g' DATA/assets/metrics-isocalendar-fullyear.svg
             sed -i 's/#30a14e/#26a641/g' DATA/assets/metrics-isocalendar-fullyear.svg
             sed -i 's/#216e39/#39d353/g' DATA/assets/metrics-isocalendar-fullyear.svg
-            sed -i 's/color:#0366d6/color:#58a6ff/g' DATA/assets/metrics-isocalendar-fullyear.svg
             sed -i 's/color:#777/color:#8b949e/g' DATA/assets/metrics-isocalendar-fullyear.svg
           fi
+          # Apply green theme, centered headers, section swapping, and LeetCode rename
+          python3 scripts/customize_cards_theme.py
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add DATA/assets/metrics-*.svg

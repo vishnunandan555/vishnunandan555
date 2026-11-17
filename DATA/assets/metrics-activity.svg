@@ -4,7 +4,7 @@
     </defs>
     <style>
         svg { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; color: #777; }
-        h2 { margin: 8px 0 12px; padding: 0; color: #58a6ff; font-weight: 400; font-size: 16px; display: flex; align-items: center; }
+        h2 { margin: 8px 0 12px; padding: 0; color: #3dff74; font-weight: 400; font-size: 16px; display: flex; align-items: center; justify-content: center; }
         h2 svg { fill: currentColor; margin-right: 8px; }
         .activity-item { display: flex; align-items: flex-start; margin-bottom: 14px; font-size: 13px; }
         .activity-icon { margin-right: 12px; margin-top: 2px; flex-shrink: 0; }
