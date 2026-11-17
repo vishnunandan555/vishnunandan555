@@ -43,20 +43,12 @@ jobs:
           plugin_followup_indepth: no
           output_action: none
 
-      # Step 3: Recent GitHub Activity & Commits
-      - name: Metrics - Recent Activity
-        uses: lowlighter/metrics@latest
-        continue-on-error: true
-        with:
-          filename: NEW/assets/metrics-activity.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: vishnunandan555
-          base: ""
-          plugin_activity: yes
-          plugin_activity_limit: 4
-          plugin_activity_days: 14
-          plugin_activity_filter: all
-          output_action: none
+      # Step 3: Recent GitHub Activity & Commits (Custom resilient generator)
+      - name: Generate Recent Activity SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/generate_recent_activity.py
 
       # Step 4: LeetCode Statistics (Account: l0rdv1shnu)
       - name: Metrics - LeetCode Statistics
@@ -73,11 +65,15 @@ jobs:
 
       # Step 5: Process renders, apply dark mode palette, commit, and push
       - name: Commit and push metrics changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p NEW/assets
           if [ -d "/metrics_renders" ]; then
-            find /metrics_renders -name "metrics-*.svg" -exec sudo cp -vf {} NEW/assets/ \;
+            find /metrics_renders -name "metrics-*.svg" ! -name "metrics-activity.svg" -exec sudo cp -vf {} NEW/assets/ \;
           fi
+          # Ensure recent activity card is freshly generated
+          python3 scripts/generate_recent_activity.py
           # Convert isocalendar to GitHub Dark mode palette
           if [ -f "NEW/assets/metrics-isocalendar-fullyear.svg" ]; then
             sed -i 's/#ebedf0/#161b22/g' NEW/assets/metrics-isocalendar-fullyear.svg
