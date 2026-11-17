@@ -21,7 +21,7 @@ jobs:
         uses: lowlighter/metrics@latest
         continue-on-error: true
         with:
-          filename: NEW/assets/metrics-isocalendar-fullyear.svg
+          filename: DATA/assets/metrics-isocalendar-fullyear.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           user: vishnunandan555
           base: ""
@@ -34,7 +34,7 @@ jobs:
         uses: lowlighter/metrics@latest
         continue-on-error: true
         with:
-          filename: NEW/assets/metrics-followup.svg
+          filename: DATA/assets/metrics-followup.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           user: vishnunandan555
           base: ""
@@ -55,7 +55,7 @@ jobs:
         uses: lowlighter/metrics@latest
         continue-on-error: true
         with:
-          filename: NEW/assets/metrics-leetcode.svg
+          filename: DATA/assets/metrics-leetcode.svg
           token: NOT_NEEDED
           base: ""
           plugin_leetcode: yes
@@ -68,25 +68,25 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p NEW/assets
+          mkdir -p DATA/assets
           if [ -d "/metrics_renders" ]; then
-            find /metrics_renders -name "metrics-*.svg" ! -name "metrics-activity.svg" -exec sudo cp -vf {} NEW/assets/ \;
+            find /metrics_renders -name "metrics-*.svg" ! -name "metrics-activity.svg" -exec sudo cp -vf {} DATA/assets/ \;
           fi
           # Ensure recent activity card is freshly generated
           python3 scripts/generate_recent_activity.py
           # Convert isocalendar to GitHub Dark mode palette
-          if [ -f "NEW/assets/metrics-isocalendar-fullyear.svg" ]; then
-            sed -i 's/#ebedf0/#161b22/g' NEW/assets/metrics-isocalendar-fullyear.svg
-            sed -i 's/#9be9a8/#0e4429/g' NEW/assets/metrics-isocalendar-fullyear.svg
-            sed -i 's/#40c463/#006d32/g' NEW/assets/metrics-isocalendar-fullyear.svg
-            sed -i 's/#30a14e/#26a641/g' NEW/assets/metrics-isocalendar-fullyear.svg
-            sed -i 's/#216e39/#39d353/g' NEW/assets/metrics-isocalendar-fullyear.svg
-            sed -i 's/color:#0366d6/color:#58a6ff/g' NEW/assets/metrics-isocalendar-fullyear.svg
-            sed -i 's/color:#777/color:#8b949e/g' NEW/assets/metrics-isocalendar-fullyear.svg
+          if [ -f "DATA/assets/metrics-isocalendar-fullyear.svg" ]; then
+            sed -i 's/#ebedf0/#161b22/g' DATA/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/#9be9a8/#0e4429/g' DATA/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/#40c463/#006d32/g' DATA/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/#30a14e/#26a641/g' DATA/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/#216e39/#39d353/g' DATA/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/color:#0366d6/color:#58a6ff/g' DATA/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/color:#777/color:#8b949e/g' DATA/assets/metrics-isocalendar-fullyear.svg
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add NEW/assets/metrics-*.svg
+          git add DATA/assets/metrics-*.svg
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

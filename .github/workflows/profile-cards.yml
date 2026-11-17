@@ -21,59 +21,59 @@ jobs:
         uses: pedrocatalao/github-cool-readme@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          config: NEW/cool-readme.dotmatrix.yml
-          output: NEW/assets/dotmatrix
+          config: DATA/cool-readme.dotmatrix.yml
+          output: DATA/assets/dotmatrix
 
       # Step 2: Generate Classic Amber Cards (fallback)
       - name: Generate Classic Amber Cards
         uses: pedrocatalao/github-cool-readme@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          config: NEW/cool-readme.config.yml
-          output: NEW/assets/amber
+          config: DATA/cool-readme.config.yml
+          output: DATA/assets/amber
 
       # Step 3: Align file locations and fetch dynamic data
       - name: Sync Card Assets and Refresh Dynamic Stats
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p NEW/assets
-          if [ -f "NEW/assets/dotmatrix/streaks-dark.svg" ]; then
-            cp NEW/assets/dotmatrix/streaks-dark.svg NEW/assets/dotmatrix-streaks-dark.svg
+          mkdir -p DATA/assets
+          if [ -f "DATA/assets/dotmatrix/streaks-dark.svg" ]; then
+            cp DATA/assets/dotmatrix/streaks-dark.svg DATA/assets/dotmatrix-streaks-dark.svg
           fi
-          if [ -f "NEW/assets/dotmatrix/about-dark.svg" ]; then
-            cp NEW/assets/dotmatrix/about-dark.svg NEW/assets/dotmatrix-about-dark.svg
+          if [ -f "DATA/assets/dotmatrix/about-dark.svg" ]; then
+            cp DATA/assets/dotmatrix/about-dark.svg DATA/assets/dotmatrix-about-dark.svg
           fi
-          if [ -f "NEW/assets/dotmatrix/weekly-dark.svg" ]; then
-            cp NEW/assets/dotmatrix/weekly-dark.svg NEW/assets/dotmatrix-weekly-dark.svg
+          if [ -f "DATA/assets/dotmatrix/weekly-dark.svg" ]; then
+            cp DATA/assets/dotmatrix/weekly-dark.svg DATA/assets/dotmatrix-weekly-dark.svg
           fi
-          if [ -f "NEW/assets/dotmatrix/summary-dark.svg" ]; then
-            cp NEW/assets/dotmatrix/summary-dark.svg NEW/assets/dotmatrix-summary-dark.svg
+          if [ -f "DATA/assets/dotmatrix/summary-dark.svg" ]; then
+            cp DATA/assets/dotmatrix/summary-dark.svg DATA/assets/dotmatrix-summary-dark.svg
           fi
           # Recalculate and update active days to monthly (last 30 days)
           python3 scripts/update_active_days_monthly.py || true
-          if [ -f "NEW/assets/amber/weekly-dark.svg" ]; then
-            cp NEW/assets/amber/weekly-dark.svg NEW/assets/weekly-amber.svg
+          if [ -f "DATA/assets/amber/weekly-dark.svg" ]; then
+            cp DATA/assets/amber/weekly-dark.svg DATA/assets/weekly-amber.svg
           fi
-          if [ -f "NEW/assets/amber/languages-dark.svg" ]; then
-            cp NEW/assets/amber/languages-dark.svg NEW/assets/classic-languages.svg
+          if [ -f "DATA/assets/amber/languages-dark.svg" ]; then
+            cp DATA/assets/amber/languages-dark.svg DATA/assets/classic-languages.svg
           fi
           # Update dynamic public repo count in custom tipsy top banner
-          if [ -f "NEW/assets/profile-summary-details.svg" ]; then
+          if [ -f "DATA/assets/profile-summary-details.svg" ]; then
             REPOS=$(curl -s https://api.github.com/users/vishnunandan555 | jq -r '.public_repos // empty')
             if [ -n "$REPOS" ] && [ "$REPOS" != "null" ]; then
-              sed -i -E "s/>[0-9]+ public repos</>${REPOS} public repos</g" NEW/assets/profile-summary-details.svg
+              sed -i -E "s/>[0-9]+ public repos</>${REPOS} public repos</g" DATA/assets/profile-summary-details.svg
             fi
           fi
           # Fetch dynamic GitHub PR Stats (Contribution Timeline)
-          curl -s --max-time 20 "https://github-pr-stats-five.vercel.app/api/github-pr-stats?username=vishnunandan555&theme=dark&limit=5" -o NEW/assets/github-pr-stats.svg || true
+          curl -s --max-time 20 "https://github-pr-stats-five.vercel.app/api/github-pr-stats?username=vishnunandan555&theme=dark&limit=5" -o DATA/assets/github-pr-stats.svg || true
           python3 scripts/process_pr_stats.py || true
 
       - name: Commit and push card changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add NEW/assets/
+          git add DATA/assets/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

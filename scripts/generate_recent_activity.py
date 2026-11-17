@@ -10,7 +10,7 @@ import urllib.error
 from datetime import datetime, timezone
 
 USERNAME = "vishnunandan555"
-OUTPUT_FILE = "NEW/assets/metrics-activity.svg"
+OUTPUT_FILE = "DATA/assets/metrics-activity.svg"
 
 # GitHub Octicon SVGs
 ICON_PUSH = '<svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#58a6ff"><path fill-rule="evenodd" d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/></svg>'

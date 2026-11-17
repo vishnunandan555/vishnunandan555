@@ -169,9 +169,9 @@ def main():
     print(f"Monthly active percentage: {pct}%")
 
     target_files = [
-        "NEW/assets/dotmatrix-summary-dark.svg",
-        "NEW/assets/dotmatrix/summary-dark.svg",
-        "NEW/assets/dotmatrix/summary-light.svg"
+        "DATA/assets/dotmatrix-summary-dark.svg",
+        "DATA/assets/dotmatrix/summary-dark.svg",
+        "DATA/assets/dotmatrix/summary-light.svg"
     ]
 
     for tf in target_files:

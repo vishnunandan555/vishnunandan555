@@ -10,7 +10,7 @@ Process github-pr-stats.svg:
 import os
 import re
 
-SVG_PATH = "NEW/assets/github-pr-stats.svg"
+SVG_PATH = "DATA/assets/github-pr-stats.svg"
 
 def process_svg():
     if not os.path.exists(SVG_PATH):
