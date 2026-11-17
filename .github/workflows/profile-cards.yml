@@ -65,15 +65,14 @@ jobs:
               sed -i -E "s/>[0-9]+ public repos</>${REPOS} public repos</g" DATA/assets/profile-summary-details.svg
             fi
           fi
-          # Fetch dynamic GitHub PR Stats (Contribution Timeline)
-          curl -s --max-time 20 "https://github-pr-stats-five.vercel.app/api/github-pr-stats?username=vishnunandan555&theme=dark&limit=5" -o DATA/assets/github-pr-stats.svg || true
-          python3 scripts/process_pr_stats.py || true
+          # Update dynamic Markdown contributions table in README.md
+          python3 scripts/update_contributions_table.py || true
 
       - name: Commit and push card changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add DATA/assets/
+          git add DATA/assets/ README.md
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

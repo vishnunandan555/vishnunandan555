@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 120" width="890" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 75" width="890" height="75">
   <defs>
     <linearGradient id="laserGlow" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#3dff74" stop-opacity="0" />
@@ -23,25 +23,13 @@
         0%, 49% { opacity: 1; }
         50%, 100% { opacity: 0; }
       }
-      @keyframes pulseDot {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.4; }
-      }
       .cursor {
         animation: blink 1s infinite;
         fill: #3dff74;
       }
-      .quote {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-size: 13.5px;
-        font-style: italic;
-        letter-spacing: 0.5px;
-        fill: #8b949e;
-        text-anchor: middle;
-      }
       .terminal-text {
         font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
-        font-size: 12px;
+        font-size: 12.5px;
         fill: #3dff74;
         text-anchor: middle;
       }
@@ -50,17 +38,6 @@
       }
       .term-green {
         fill: #3dff74;
-      }
-      .live-dot {
-        animation: pulseDot 2s ease-in-out infinite;
-        fill: #3dff74;
-      }
-      .status-text {
-        font-family: ui-monospace, SFMono-Regular, monospace;
-        font-size: 11px;
-        letter-spacing: 1.5px;
-        fill: #6e7681;
-        text-anchor: middle;
       }
     </style>
   </defs>
@@ -75,26 +52,15 @@
     <circle cx="0" cy="0" r="1.8" fill="#3dff74" />
   </g>
 
-  <!-- Poetic Signature -->
-  <text x="445" y="44" class="quote">
-    “ Too curious to settle. <tspan fill="#e6edf3">Too restless to stop.</tspan> ”
-  </text>
-
-  <!-- Terminal Connection Prompt -->
-  <g transform="translate(0, 2)">
-    <!-- Pill Container -->
-    <rect x="255" y="54" width="380" height="28" rx="14" fill="url(#badgeGlow)" stroke="#30363d" stroke-width="1" />
+  <!-- Terminal Connection Prompt (Squircle Container) -->
+  <g transform="translate(0, 0)">
+    <rect x="245" y="30" width="400" height="32" rx="7" fill="url(#badgeGlow)" stroke="#30363d" stroke-width="1" />
     
-    <text x="445" y="72" class="terminal-text">
+    <text x="445" y="51" class="terminal-text">
       <tspan class="terminal-sub">vishnu@workspace:~$ </tspan>
       <tspan class="term-green">visit </tspan>
       <tspan fill="#f0f6fc">vishnunandan.xyz</tspan>
       <tspan class="cursor"> █</tspan>
     </text>
   </g>
-
-  <!-- Status / Origin Meta -->
-  <text x="445" y="106" class="status-text">
-    <tspan class="live-dot">● </tspan>SYSTEM STATUS: ONLINE  ✦  KERALA, INDIA
-  </text>
 </svg>
