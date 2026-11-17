@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="450" height="219" viewBox="0 0 400 195" fill="none" role="img" aria-labelledby="title desc">
 <title id="title">Most used languages</title>
-<desc id="desc">Python 33.9%, Dart 27.9%, JavaScript 9.9%, Rust 5.9%, Go 5.6%, Other 16.8%</desc>
+<desc id="desc">Python 34.9%, Dart 27.5%, JavaScript 9.8%, Rust 5.9%, Go 5.5%, Other 16.5%</desc>
 <style>
   text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #1f2328; }
   .label { font-size: 14px; }
@@ -22,11 +22,11 @@
 <rect x="0.5" y="0.5" width="399" height="194" rx="6" fill="none" stroke="none"/>
 <text x="20" y="28" class="col">MOST USED LANGUAGES</text>
 <mask id="bar"><rect class="grow" x="20" y="48" width="360" height="10" rx="5" fill="#fff"/></mask>
-<g mask="url(#bar)"><rect x="20.00" y="48" width="118.70" height="10" fill="#3572A5"/><rect x="140.70" y="48" width="97.55" height="10" fill="#00B4AB"/><rect x="240.25" y="48" width="34.72" height="10" fill="#f1e05a"/><rect x="276.97" y="48" width="20.81" height="10" fill="#dea584"/><rect x="299.79" y="48" width="19.57" height="10" fill="#00ADD8"/><rect x="321.36" y="48" width="58.64" height="10" fill="#8c959f"/></g>
-<g transform="translate(20 84)"><g class="fade" style="animation-delay: 200ms"><circle cx="5" cy="6" r="5" fill="#3572A5"/><text x="16" y="11" class="label">Python <tspan class="secondary">33.9%</tspan></text></g></g>
-<g transform="translate(200 84)"><g class="fade" style="animation-delay: 270ms"><circle cx="5" cy="6" r="5" fill="#00B4AB"/><text x="16" y="11" class="label">Dart <tspan class="secondary">27.9%</tspan></text></g></g>
-<g transform="translate(20 116)"><g class="fade" style="animation-delay: 340ms"><circle cx="5" cy="6" r="5" fill="#f1e05a"/><text x="16" y="11" class="label">JavaScript <tspan class="secondary">9.9%</tspan></text></g></g>
+<g mask="url(#bar)"><rect x="20.00" y="48" width="122.01" height="10" fill="#3572A5"/><rect x="144.01" y="48" width="96.15" height="10" fill="#00B4AB"/><rect x="242.17" y="48" width="34.22" height="10" fill="#f1e05a"/><rect x="278.39" y="48" width="20.52" height="10" fill="#dea584"/><rect x="300.91" y="48" width="19.29" height="10" fill="#00ADD8"/><rect x="322.20" y="48" width="57.80" height="10" fill="#8c959f"/></g>
+<g transform="translate(20 84)"><g class="fade" style="animation-delay: 200ms"><circle cx="5" cy="6" r="5" fill="#3572A5"/><text x="16" y="11" class="label">Python <tspan class="secondary">34.9%</tspan></text></g></g>
+<g transform="translate(200 84)"><g class="fade" style="animation-delay: 270ms"><circle cx="5" cy="6" r="5" fill="#00B4AB"/><text x="16" y="11" class="label">Dart <tspan class="secondary">27.5%</tspan></text></g></g>
+<g transform="translate(20 116)"><g class="fade" style="animation-delay: 340ms"><circle cx="5" cy="6" r="5" fill="#f1e05a"/><text x="16" y="11" class="label">JavaScript <tspan class="secondary">9.8%</tspan></text></g></g>
 <g transform="translate(200 116)"><g class="fade" style="animation-delay: 410ms"><circle cx="5" cy="6" r="5" fill="#dea584"/><text x="16" y="11" class="label">Rust <tspan class="secondary">5.9%</tspan></text></g></g>
-<g transform="translate(20 148)"><g class="fade" style="animation-delay: 480ms"><circle cx="5" cy="6" r="5" fill="#00ADD8"/><text x="16" y="11" class="label">Go <tspan class="secondary">5.6%</tspan></text></g></g>
-<g transform="translate(200 148)"><g class="fade" style="animation-delay: 550ms"><circle cx="5" cy="6" r="5" fill="#8c959f"/><text x="16" y="11" class="label">Other <tspan class="secondary">16.8%</tspan></text></g></g>
+<g transform="translate(20 148)"><g class="fade" style="animation-delay: 480ms"><circle cx="5" cy="6" r="5" fill="#00ADD8"/><text x="16" y="11" class="label">Go <tspan class="secondary">5.5%</tspan></text></g></g>
+<g transform="translate(200 148)"><g class="fade" style="animation-delay: 550ms"><circle cx="5" cy="6" r="5" fill="#8c959f"/><text x="16" y="11" class="label">Other <tspan class="secondary">16.5%</tspan></text></g></g>
 </svg>
