@@ -67,9 +67,7 @@ jobs:
           fi
           # Fetch dynamic GitHub PR Stats (Contribution Timeline)
           curl -s --max-time 20 "https://github-pr-stats-five.vercel.app/api/github-pr-stats?username=vishnunandan555&theme=dark&limit=5" -o NEW/assets/github-pr-stats.svg || true
-          if [ -f "NEW/assets/github-pr-stats.svg" ]; then
-            sed -i 's/style="background-color: #0d1117;"//g' NEW/assets/github-pr-stats.svg
-          fi
+          python3 scripts/process_pr_stats.py || true
 
       - name: Commit and push card changes
         run: |
