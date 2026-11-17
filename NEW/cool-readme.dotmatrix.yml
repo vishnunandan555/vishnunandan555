@@ -1,0 +1,33 @@
+# Configuration for pedrocatalao/github-cool-readme (Dot-Matrix Style)
+user: vishnunandan555
+
+count:
+  private: false          # Only count public repositories
+  orgs: true
+
+# The cards to generate
+show: [streaks, about, weekly, summary]
+
+look:
+  style: dotmatrix        # round LEDs over a faint grid of unlit ones
+  color: green            # classic phosphor green CRT/terminal look (or 'amber')
+  animations: true        # rotating pinball/slide transitions
+  background: none        # transparent background to adapt to theme
+
+cards:
+  streaks:
+    title: Streaks        # Rotates through 6 slides: Current streak, Longest streak, Active days, Per active day, Best day, Best month (with contribution waveform)
+  about:
+    title: About
+    headline: "Hi, I'm *Vishnu*"
+    lines:
+      - "Building modern software, performant systems & web applications."
+    facts:
+      Currently: "Diving into modern architectures"
+      Portfolio: "vishnunandan.xyz"
+      Focus: "Full-stack & Systems"
+  summary:
+    title: GitHub stats
+    ring: github
+  weekly:
+    title: Weekly rhythm

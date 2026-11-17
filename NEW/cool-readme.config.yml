@@ -1,0 +1,25 @@
+# Configuration for pedrocatalao/github-cool-readme
+user: vishnunandan555
+
+count:
+  private: false          # Only count public repositories
+  orgs: true
+
+# The cards to show
+show: [weekly, languages]
+
+look:
+  style: classic          # classic with amber highlights
+  color: amber            # amber accent color
+  animations: true        # dynamic animated counters & bars
+  background: none        # transparent background to seamlessly fit GitHub dark/light mode
+  border: false           # clean borderless card layout
+
+cards:
+  summary:
+    title: null
+    ring: github          # Replaces the active-days percent circle with the official GitHub logo
+  weekly:
+    title: Weekly rhythm
+  streaks:
+    title: Streaks

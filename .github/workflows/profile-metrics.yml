@@ -1,0 +1,99 @@
+name: Update Profile Metrics
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # Runs daily at 01:00 UTC
+  workflow_dispatch:     # Allows manual trigger anytime
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 1. Isometric Full-Year Calendar
+      - name: Metrics - 1-Year Isometric Calendar
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: NEW/assets/metrics-isocalendar-fullyear.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: vishnunandan555
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          output_action: none
+
+      # 2. Issue & PR Follow-up
+      - name: Metrics - Follow-up
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: NEW/assets/metrics-followup.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: vishnunandan555
+          base: ""
+          plugin_followup: yes
+          plugin_followup_sections: repositories, user
+          plugin_followup_indepth: no
+          output_action: none
+
+      # 3. Recent Activity
+      - name: Metrics - Recent Activity
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: NEW/assets/metrics-activity.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: vishnunandan555
+          base: ""
+          plugin_activity: yes
+          plugin_activity_limit: 4
+          plugin_activity_days: 14
+          plugin_activity_filter: all
+          output_action: none
+
+      # 4. LeetCode Statistics (Account: l0rdv1shnu)
+      - name: Metrics - LeetCode
+        uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          filename: NEW/assets/metrics-leetcode.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_leetcode: yes
+          plugin_leetcode_user: l0rdv1shnu
+          plugin_leetcode_sections: solved, skills
+          output_action: none
+
+      # 4. Copy rendered SVGs from /metrics_renders to repository, commit, and push
+      - name: Commit and push metrics changes
+        run: |
+          mkdir -p NEW/assets
+          if [ -d "/metrics_renders" ]; then
+            find /metrics_renders -name "metrics-*.svg" -exec sudo cp -vf {} NEW/assets/ \;
+          fi
+          # Convert isocalendar to GitHub Dark mode palette
+          if [ -f "NEW/assets/metrics-isocalendar-fullyear.svg" ]; then
+            sed -i 's/#ebedf0/#161b22/g' NEW/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/#9be9a8/#0e4429/g' NEW/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/#40c463/#006d32/g' NEW/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/#30a14e/#26a641/g' NEW/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/#216e39/#39d353/g' NEW/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/color:#0366d6/color:#58a6ff/g' NEW/assets/metrics-isocalendar-fullyear.svg
+            sed -i 's/color:#777/color:#8b949e/g' NEW/assets/metrics-isocalendar-fullyear.svg
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add NEW/assets/metrics-*.svg
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(metrics): update metrics svgs [skip ci]"
+            git pull --rebase origin main
+            git push
+          fi

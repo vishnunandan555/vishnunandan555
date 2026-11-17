@@ -1,0 +1,100 @@
+name: Update Profile Cards
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs daily at midnight UTC
+  workflow_dispatch:     # Allows manual trigger anytime
+
+permissions:
+  contents: write
+
+jobs:
+  generate-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 1: Generate Dot-Matrix Green Cards (streaks with Best Month + About)
+      - name: Generate Dot-Matrix Cards
+        uses: pedrocatalao/github-cool-readme@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config: NEW/cool-readme.dotmatrix.yml
+          output: NEW/assets/dotmatrix
+
+      # Step 2: Generate Classic Amber Cards (weekly, languages)
+      - name: Generate Classic Amber Cards
+        uses: pedrocatalao/github-cool-readme@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config: NEW/cool-readme.config.yml
+          output: NEW/assets/amber
+
+      # Step 3: Align file locations for NEW/README_NEW.md
+      - name: Sync Card Assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p NEW/assets
+          if [ -f "NEW/assets/dotmatrix/streaks-dark.svg" ]; then
+            cp NEW/assets/dotmatrix/streaks-dark.svg NEW/assets/dotmatrix-streaks-dark.svg
+          fi
+          if [ -f "NEW/assets/dotmatrix/about-dark.svg" ]; then
+            cp NEW/assets/dotmatrix/about-dark.svg NEW/assets/dotmatrix-about-dark.svg
+          fi
+          if [ -f "NEW/assets/dotmatrix/weekly-dark.svg" ]; then
+            cp NEW/assets/dotmatrix/weekly-dark.svg NEW/assets/dotmatrix-weekly-dark.svg
+          fi
+          if [ -f "NEW/assets/dotmatrix/summary-dark.svg" ]; then
+            cp NEW/assets/dotmatrix/summary-dark.svg NEW/assets/dotmatrix-summary-dark.svg
+          fi
+          if [ -f "NEW/assets/amber/weekly-dark.svg" ]; then
+            cp NEW/assets/amber/weekly-dark.svg NEW/assets/weekly-amber.svg
+          fi
+          if [ -f "NEW/assets/amber/languages-dark.svg" ]; then
+            cp NEW/assets/amber/languages-dark.svg NEW/assets/classic-languages.svg
+          fi
+          # Update dynamic stats in custom tipsy top banner
+          if [ -f "NEW/assets/profile-summary-details.svg" ]; then
+            python3 -c "
+import json, re, urllib.request, os
+
+svg_path = 'NEW/assets/profile-summary-details.svg'
+token = os.environ.get('GITHUB_TOKEN', '')
+
+with open(svg_path, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+headers = {'User-Agent': 'GitHub-Action'}
+if token:
+    headers['Authorization'] = f'token {token}'
+try:
+    req = urllib.request.Request('https://api.github.com/users/vishnunandan555', headers=headers)
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        user_data = json.loads(resp.read().decode())
+        repos = user_data.get('public_repos')
+        if repos is not None:
+            content = re.sub(r'>[0-9]+ public repos<', f'>{repos} public repos<', content)
+except Exception as e:
+    print('Error fetching repos:', e)
+
+with open(svg_path, 'w', encoding='utf-8') as f:
+    f.write(content)
+"
+          fi
+          # Fetch dynamic GitHub PR Stats (Contribution Timeline)
+          curl -s --max-time 20 "https://github-pr-stats-five.vercel.app/api/github-pr-stats?username=vishnunandan555&theme=dark&limit=5" -o NEW/assets/github-pr-stats.svg || true
+          if [ -f "NEW/assets/github-pr-stats.svg" ]; then
+            sed -i 's/style="background-color: #0d1117;"//g' NEW/assets/github-pr-stats.svg
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add NEW/assets/
+          if git commit -m "chore(cards): update cool-readme cards [skip ci]"; then
+            git pull --rebase origin main
+            git push
+          fi
