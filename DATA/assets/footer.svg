@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 120" width="890" height="120">
+  <defs>
+    <linearGradient id="laserGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3dff74" stop-opacity="0" />
+      <stop offset="25%" stop-color="#3dff74" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#3dff74" stop-opacity="1" />
+      <stop offset="75%" stop-color="#3dff74" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#3dff74" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="badgeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes pulseDot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+      .cursor {
+        animation: blink 1s infinite;
+        fill: #3dff74;
+      }
+      .quote {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-size: 13.5px;
+        font-style: italic;
+        letter-spacing: 0.5px;
+        fill: #8b949e;
+        text-anchor: middle;
+      }
+      .terminal-text {
+        font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+        font-size: 12px;
+        fill: #58a6ff;
+        text-anchor: middle;
+      }
+      .terminal-sub {
+        fill: #8b949e;
+      }
+      .term-green {
+        fill: #3dff74;
+      }
+      .live-dot {
+        animation: pulseDot 2s ease-in-out infinite;
+        fill: #3dff74;
+      }
+      .status-text {
+        font-family: ui-monospace, SFMono-Regular, monospace;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        fill: #6e7681;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Glowing Laser Separator Line -->
+  <line x1="80" y1="14" x2="810" y2="14" stroke="url(#laserGlow)" stroke-width="1.5" filter="url(#glow)" />
+  <line x1="160" y1="14" x2="730" y2="14" stroke="#3dff74" stroke-width="1" stroke-opacity="0.9" />
+
+  <!-- Center Diamond Emblem -->
+  <g transform="translate(445, 14)">
+    <polygon points="0,-6 6,0 0,6 -6,0" fill="#0d1117" stroke="#3dff74" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="1.8" fill="#3dff74" />
+  </g>
+
+  <!-- Poetic Signature -->
+  <text x="445" y="44" class="quote">
+    “ Too curious to settle. <tspan fill="#e6edf3">Too restless to stop.</tspan> ”
+  </text>
+
+  <!-- Terminal Connection Prompt -->
+  <g transform="translate(0, 2)">
+    <!-- Pill Container -->
+    <rect x="255" y="54" width="380" height="28" rx="14" fill="url(#badgeGlow)" stroke="#30363d" stroke-width="1" />
+    
+    <text x="445" y="72" class="terminal-text">
+      <tspan class="terminal-sub">vishnu@workspace:~$ </tspan>
+      <tspan class="term-green">visit </tspan>
+      <tspan fill="#f0f6fc">vishnunandan.xyz</tspan>
+      <tspan class="cursor"> █</tspan>
+    </text>
+  </g>
+
+  <!-- Status / Origin Meta -->
+  <text x="445" y="106" class="status-text">
+    <tspan class="live-dot">● </tspan>SYSTEM STATUS: ONLINE  ✦  KERALA, INDIA
+  </text>
+</svg>

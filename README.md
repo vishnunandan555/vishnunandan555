@@ -4,13 +4,15 @@
   <!-- ROW 1: RETRO TERMINAL (PART 1: Stats Summary with Active Days Ring & About Me) -->
   <a href="https://vishnunandan.xyz"><img src="./DATA/assets/dotmatrix-summary-dark.svg" width="49.5%" alt="GitHub Stats Summary" /></a><a href="https://vishnunandan.xyz"><img src="./DATA/assets/dotmatrix-about-dark.svg" width="49.5%" alt="About" /></a><br>
   <!-- ROW 2: RETRO TERMINAL (PART 2: Streaks Waveform & Weekly Rhythm) -->
-  <a href="https://vishnunandan.xyz"><img src="./DATA/assets/dotmatrix-streaks-dark.svg" width="49.5%" alt="Streaks" /></a><a href="https://vishnunandan.xyz"><img src="./DATA/assets/dotmatrix-weekly-dark.svg" width="49.5%" alt="Weekly Rhythm" /></a><br>
+  <a href="https://github.com/vishnunandan555?tab=repositories"><img src="./DATA/assets/dotmatrix-streaks-dark.svg" width="49.5%" alt="Streaks" /></a><a href="https://github.com/vishnunandan555?tab=repositories"><img src="./DATA/assets/dotmatrix-weekly-dark.svg" width="49.5%" alt="Weekly Rhythm" /></a><br>
   <!-- ROW 3: CALENDAR & ACTIVITY (1-Year 3D Isometric Commit Calendar & Recent Activity) -->
   <a href="https://vishnunandan.xyz"><img src="./DATA/assets/metrics-isocalendar-fullyear.svg" width="49.5%" alt="1-Year Contribution Calendar" /></a><a href="https://vishnunandan.xyz"><img src="./DATA/assets/metrics-activity.svg" width="49.5%" alt="Recent Activity" /></a><br>
   <!-- ROW 4: FOLLOW-UP & LEETCODE (Issues/PRs Follow-up Status & LeetCode Statistics) -->
-  <a href="https://vishnunandan.xyz"><img src="./DATA/assets/metrics-followup.svg" width="49.5%" alt="Issue and PR Follow-up" /></a><a href="https://vishnunandan.xyz"><img src="./DATA/assets/metrics-leetcode.svg" width="49.5%" alt="LeetCode Statistics" /></a><br>
+  <a href="https://vishnunandan.xyz"><img src="./DATA/assets/metrics-followup.svg" width="49.5%" alt="Issue and PR Follow-up" /></a><a href="https://leetcode.com/u/l0rdv1shnu/"><img src="./DATA/assets/metrics-leetcode.svg" width="49.5%" alt="LeetCode Statistics" /></a><br>
   <!-- ROW 5: PULL REQUESTS TIMELINE (Dynamic PR Contributions Table) -->
-  <a href="https://vishnunandan.xyz"><img src="./DATA/assets/github-pr-stats.svg" width="99%" alt="GitHub PR Contributions Timeline" /></a>
+  <a href="https://vishnunandan.xyz"><img src="./DATA/assets/github-pr-stats.svg" width="99%" alt="GitHub PR Contributions Timeline" /></a><br>
+  <!-- FOOTER: Cyberpunk Status Signature & Terminal Connect Prompt -->
+  <a href="https://vishnunandan.xyz"><img src="./DATA/assets/footer.svg" width="99%" alt="Footer Signature" /></a>
 </div>
 
 <!--
