@@ -10,20 +10,21 @@ permissions:
 
 jobs:
   generate-cards:
+    name: Generate & Sync Profile Cards
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 1: Generate Dot-Matrix Green Cards (streaks with Best Month + About)
-      - name: Generate Dot-Matrix Cards
+      # Step 1: Generate Dot-Matrix Green Cards (streaks, about, weekly, summary)
+      - name: Generate Green DotMatrix Cards
         uses: pedrocatalao/github-cool-readme@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config: NEW/cool-readme.dotmatrix.yml
           output: NEW/assets/dotmatrix
 
-      # Step 2: Generate Classic Amber Cards (weekly, languages)
+      # Step 2: Generate Classic Amber Cards (fallback)
       - name: Generate Classic Amber Cards
         uses: pedrocatalao/github-cool-readme@v1
         with:
@@ -31,8 +32,8 @@ jobs:
           config: NEW/cool-readme.config.yml
           output: NEW/assets/amber
 
-      # Step 3: Align file locations for NEW/README_NEW.md
-      - name: Sync Card Assets
+      # Step 3: Align file locations and fetch dynamic data
+      - name: Sync Card Assets and Refresh Dynamic Stats
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -89,12 +90,15 @@ with open(svg_path, 'w', encoding='utf-8') as f:
             sed -i 's/style="background-color: #0d1117;"//g' NEW/assets/github-pr-stats.svg
           fi
 
-      - name: Commit and push changes
+      - name: Commit and push card changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add NEW/assets/
-          if git commit -m "chore(cards): update cool-readme cards [skip ci]"; then
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(cards): update profile cards and dynamic stats [skip ci]"
             git pull --rebase origin main
             git push
           fi

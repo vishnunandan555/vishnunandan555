@@ -10,12 +10,13 @@ permissions:
 
 jobs:
   metrics:
+    name: Generate & Sync Profile Metrics
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 1. Isometric Full-Year Calendar
+      # Step 1: 1-Year Isometric Contribution Calendar
       - name: Metrics - 1-Year Isometric Calendar
         uses: lowlighter/metrics@latest
         continue-on-error: true
@@ -28,8 +29,8 @@ jobs:
           plugin_isocalendar_duration: full-year
           output_action: none
 
-      # 2. Issue & PR Follow-up
-      - name: Metrics - Follow-up
+      # Step 2: Issue & PR Follow-up (repositories + user)
+      - name: Metrics - Issues & PRs Follow-up
         uses: lowlighter/metrics@latest
         continue-on-error: true
         with:
@@ -42,7 +43,7 @@ jobs:
           plugin_followup_indepth: no
           output_action: none
 
-      # 3. Recent Activity
+      # Step 3: Recent GitHub Activity & Commits
       - name: Metrics - Recent Activity
         uses: lowlighter/metrics@latest
         continue-on-error: true
@@ -57,8 +58,8 @@ jobs:
           plugin_activity_filter: all
           output_action: none
 
-      # 4. LeetCode Statistics (Account: l0rdv1shnu)
-      - name: Metrics - LeetCode
+      # Step 4: LeetCode Statistics (Account: l0rdv1shnu)
+      - name: Metrics - LeetCode Statistics
         uses: lowlighter/metrics@latest
         continue-on-error: true
         with:
@@ -70,7 +71,7 @@ jobs:
           plugin_leetcode_sections: solved, skills
           output_action: none
 
-      # 4. Copy rendered SVGs from /metrics_renders to repository, commit, and push
+      # Step 5: Process renders, apply dark mode palette, commit, and push
       - name: Commit and push metrics changes
         run: |
           mkdir -p NEW/assets
