@@ -53,6 +53,8 @@ jobs:
           fi
           # Recalculate and update active days to monthly (last 30 days)
           python3 scripts/update_active_days_monthly.py || true
+          # Balance vertical padding & apply 4-dot spacing on DotMatrix cards
+          python3 scripts/customize_dotmatrix.py || true
           if [ -f "DATA/assets/amber/weekly-dark.svg" ]; then
             cp DATA/assets/amber/weekly-dark.svg DATA/assets/weekly-amber.svg
           fi
