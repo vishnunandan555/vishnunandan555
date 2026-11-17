@@ -10,8 +10,8 @@
         .activity-icon { margin-right: 12px; margin-top: 2px; flex-shrink: 0; }
         .activity-content { flex: 1; min-width: 0; line-height: 1.4; }
         .action { color: #8b949e; }
-        .title-link { color: #58a6ff; font-weight: 500; text-decoration: none; }
-        .repo-link { color: #58a6ff; font-size: 12px; }
+        .title-link { color: #3dff74; font-weight: 500; text-decoration: none; }
+        .repo-link { color: #3dff74; font-size: 12px; }
         .time { color: #6e7681; font-size: 11px; margin-left: 6px; }
         .badge { background-color: #21262d; border-radius: 4px; padding: 2px 6px; font-size: 11px; font-family: ui-monospace, SFMono-Regular, monospace; color: #c9d1d9; }
         .diff { font-size: 11px; color: #8b949e; margin-top: 2px; }
@@ -26,7 +26,7 @@
             </h2>
 
             <div class="activity-item">
-                <svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#58a6ff"><path fill-rule="evenodd" d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/></svg>
+                <svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#3dff74"><path fill-rule="evenodd" d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/></svg>
                 <div class="activity-content">
                     <div>
                         <span class="action">Pushed to <span class="badge">playground</span></span>
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="activity-item">
-                <svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#58a6ff"><path fill-rule="evenodd" d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/></svg>
+                <svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#3dff74"><path fill-rule="evenodd" d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/></svg>
                 <div class="activity-content">
                     <div>
                         <span class="action">Pushed to <span class="badge">dev</span></span>

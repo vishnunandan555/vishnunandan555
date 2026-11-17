@@ -42,7 +42,7 @@
       .terminal-text {
         font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
         font-size: 12px;
-        fill: #58a6ff;
+        fill: #3dff74;
         text-anchor: middle;
       }
       .terminal-sub {

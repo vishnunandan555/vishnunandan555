@@ -13,7 +13,7 @@ USERNAME = "vishnunandan555"
 OUTPUT_FILE = "DATA/assets/metrics-activity.svg"
 
 # GitHub Octicon SVGs
-ICON_PUSH = '<svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#58a6ff"><path fill-rule="evenodd" d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/></svg>'
+ICON_PUSH = '<svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#3dff74"><path fill-rule="evenodd" d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/></svg>'
 ICON_PR = '<svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#8957e5"><path fill-rule="evenodd" d="M5 3.254V3.25v.005a.75.75 0 110-.005v.004zm.45 1.9a2.25 2.25 0 10-1.95.218v5.256a2.25 2.25 0 101.5 0V7.123A5.735 5.735 0 009.25 9h1.378a2.251 2.251 0 100-1.5H9.25a4.25 4.25 0 01-3.8-2.346zM12.75 9a.75.75 0 100-1.5.75.75 0 000 1.5zm-8.5 4.5a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>'
 ICON_ISSUE = '<svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#3fb950"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-6.25a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 1.5 0v-3.5z"/></svg>'
 ICON_STAR = '<svg class="activity-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#e3b341"><path fill-rule="evenodd" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/></svg>'
@@ -201,8 +201,8 @@ def main():
         .activity-icon {{ margin-right: 12px; margin-top: 2px; flex-shrink: 0; }}
         .activity-content {{ flex: 1; min-width: 0; line-height: 1.4; }}
         .action {{ color: #8b949e; }}
-        .title-link {{ color: #58a6ff; font-weight: 500; text-decoration: none; }}
-        .repo-link {{ color: #58a6ff; font-size: 12px; }}
+        .title-link {{ color: #3dff74; font-weight: 500; text-decoration: none; }}
+        .repo-link {{ color: #3dff74; font-size: 12px; }}
         .time {{ color: #6e7681; font-size: 11px; margin-left: 6px; }}
         .badge {{ background-color: #21262d; border-radius: 4px; padding: 2px 6px; font-size: 11px; font-family: ui-monospace, SFMono-Regular, monospace; color: #c9d1d9; }}
         .diff {{ font-size: 11px; color: #8b949e; margin-top: 2px; }}
