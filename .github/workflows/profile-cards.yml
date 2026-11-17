@@ -50,6 +50,8 @@ jobs:
           if [ -f "NEW/assets/dotmatrix/summary-dark.svg" ]; then
             cp NEW/assets/dotmatrix/summary-dark.svg NEW/assets/dotmatrix-summary-dark.svg
           fi
+          # Recalculate and update active days to monthly (last 30 days)
+          python3 scripts/update_active_days_monthly.py || true
           if [ -f "NEW/assets/amber/weekly-dark.svg" ]; then
             cp NEW/assets/amber/weekly-dark.svg NEW/assets/weekly-amber.svg
           fi
