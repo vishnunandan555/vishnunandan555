@@ -40,7 +40,7 @@
       <!-- Row 2: Repos -->
       <g transform="translate(0, 42)">
         <path class="icon" d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM2 4h12v1.5H2Zm0 3.5h12V9H2Zm0 3.5h12V13H2Z" transform="translate(0, -12) scale(0.9)"/>
-        <text x="22" y="0" class="text-meta">27 public repos</text>
+        <text x="22" y="0" class="text-meta">28 public repos</text>
       </g>
 
       <!-- Row 3: Joined -->
