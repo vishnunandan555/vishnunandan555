@@ -35,7 +35,7 @@
                 <div class="activity-content">
                     <div>
                         <span class="action">Pushed to <span class="badge">main</span></span>
-                        <span class="time">4h ago</span>
+                        <span class="time">yesterday</span>
                     </div>
                     <div class="repo-link">in vishnunandan555/examer</div>
                     <div class="diff">pushed updates to main</div>
@@ -46,7 +46,7 @@
                 <div class="activity-content">
                     <div>
                         <span class="action">Pushed to <span class="badge">main</span></span>
-                        <span class="time">yesterday</span>
+                        <span class="time">2d ago</span>
                     </div>
                     <div class="repo-link">in vishnunandan555/vishnunandan555</div>
                     <div class="diff">pushed updates to main</div>
@@ -57,7 +57,7 @@
                 <div class="activity-content">
                     <div>
                         <span class="action">Created branch <span class="badge">feat/floating-bottom-nav</span></span>
-                        <span class="time">2d ago</span>
+                        <span class="time">3d ago</span>
                     </div>
                     <div class="repo-link">in vishnunandan555/Zplit</div>
                     <div class="diff">created branch in vishnunandan555/Zplit</div>
