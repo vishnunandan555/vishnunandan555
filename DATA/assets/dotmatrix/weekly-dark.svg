@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="450" height="219" viewBox="0 -10 450 219" fill="none" role="img" aria-labelledby="title desc">
 <title id="title">Weekly rhythm</title>
-<desc id="desc">Contributions per weekday over the last 12 months: Mon 116, Tue 149, Wed 100, Thu 194, Fri 214, Sat 211, Sun 171. Busiest: Fri. Quietest: Wed. On weekdays: 67%.</desc>
+<desc id="desc">Contributions per weekday over the last 12 months: Mon 116, Tue 149, Wed 101, Thu 194, Fri 214, Sat 211, Sun 171. Busiest: Fri. Quietest: Wed. On weekdays: 67%.</desc>
 <style>
   .wspall { animation: wspall 10.6s infinite; }
   @keyframes wspall { 0.000% { opacity: 0; } 5.660% { opacity: 0; animation-timing-function: steps(1, end); } 5.670% { opacity: 1; } 99.991% { opacity: 1; animation-timing-function: steps(1, end); } 100.000% { opacity: 0; } }
