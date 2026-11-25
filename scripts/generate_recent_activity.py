@@ -161,22 +161,13 @@ def main():
             if len(items) >= 4:
                 break
 
-    # Fallback if no events found
-    if not items:
-        items = [
-            {
-                "icon": ICON_PUSH,
-                "action": 'Pushed to <span class="badge">main</span>',
-                "repo": "vishnunandan555/vishnunandan555",
-                "desc": "update profile stats and layout",
-                "time": "recently"
-            }
-        ]
-
     # Generate HTML items
     items_html = ""
-    for it in items:
-        items_html += f"""
+    if not items:
+        items_html = '<div style="padding: 24px; text-align: center; color: #8b949e; font-size: 13px;">No recent public activity recorded</div>'
+    else:
+        for it in items:
+            items_html += f"""
             <div class="activity-item">
                 {it['icon']}
                 <div class="activity-content">

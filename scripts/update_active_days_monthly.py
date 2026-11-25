@@ -118,12 +118,11 @@ def get_monthly_active_percentage(username="vishnunandan555"):
                 active_days.add(dt.date())
         
         pct = round((len(active_days) / 30) * 100)
-        if pct > 0:
-            return pct
+        return pct
     except Exception as e:
-        print(f"Notice: Failed to fetch events for active days ({e}), falling back to 53%")
+        print(f"Notice: Failed to fetch events for active days ({e}), setting to 0%")
     
-    return 53
+    return 0
 
 def update_summary_svg(filepath, percentage):
     if not os.path.exists(filepath):
